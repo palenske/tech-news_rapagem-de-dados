@@ -15,8 +15,6 @@ Lista de requisitos:
   - [12 - Crie a função analyzer_menu](#12---crie-a-função-analyzer_menu)
   - [13 - Implemente as funcionalidades do menu](#13---implemente-as-funcionalidades-do-menu)
 
-- [Avisos finais](#avisos-finais)
-
 ---
 
 # Habilidades
