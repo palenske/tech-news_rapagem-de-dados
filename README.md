@@ -31,7 +31,7 @@ O site usado é o canal de noticias sobre de tecnologia [TecMundo](https://www.t
 
 Terá uma saída parecida com esta:
 
-    ```
+```
     Selecione uma das opções a seguir:
     0 - Popular o banco com notícias;
     1 - Buscar notícias por título;
@@ -41,7 +41,7 @@ Terá uma saída parecida com esta:
     5 - Listar top 5 notícias;
     6 - Listar top 5 categorias;
     7 - Sair.
-    ```
+```
 > Em breve montarei uma interface para usar essas funções em uma página HTML, sem precisar realizar os procedimentos acima 😉
 ---
 
