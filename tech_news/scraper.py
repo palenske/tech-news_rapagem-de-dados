@@ -5,7 +5,6 @@ from tech_news.utils import stripator, gather
 from tech_news.database import create_news
 
 
-# Requisito 1
 def fetch(url):
     try:
         sleep(1)
@@ -18,7 +17,6 @@ def fetch(url):
         return response.text
 
 
-# Requisito 2
 def scrape_novidades(html_content):
     selector = Selector(text=html_content)
     return selector.css(
@@ -26,13 +24,11 @@ def scrape_novidades(html_content):
     ).getall()
 
 
-# Requisito 3
 def scrape_next_page_link(html_content):
     selector = Selector(text=html_content)
     return selector.css(".tec--list .tec--btn::attr(href)").get()
 
 
-# Requisito 4
 def scrape_noticia(html_content):
     selector = Selector(text=html_content)
 
@@ -63,7 +59,6 @@ def scrape_noticia(html_content):
     }
 
 
-# Requisito 5
 def get_tech_news(amount):
     BASE_URL = "https://www.tecmundo.com.br/novidades"
     html_content = fetch(BASE_URL)
@@ -81,5 +76,3 @@ def get_tech_news(amount):
     list_news = [url_to_scrape(url) for url in url_list[:amount]]
 
     create_news(list_news)
-
-    return list_news

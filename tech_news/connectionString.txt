@@ -1,0 +1,1 @@
+mongodb+srv://palenske:J8FeKVPFLZvWgVRx@palenskeherokudb.6zcox.mongodb.net/Tech-News?retryWrites=true&w=majority

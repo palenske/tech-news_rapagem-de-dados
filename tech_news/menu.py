@@ -1,63 +1,72 @@
 import sys
 from tech_news.scraper import get_tech_news
-from tech_news.analyzer.search_engine import (
-    search_by_title,
-    search_by_date,
-    search_by_source,
-    search_by_category,
-)
+from tech_news.analyzer.search_engine import SearchEngine
 from tech_news.analyzer.ratings import top_5_news, top_5_categories
 
+SE = SearchEngine()
 
-# Requisito 12
-def opt_0():
-    amount = input("Digite quantas notícias serão buscadas:\n")
+
+def save_news_in_db():
+    amount = int(input("Digite quantas notícias serão buscadas: "))
     get_tech_news(amount)
+    return "Dados salvos no banco!"
 
 
-def opt_1():
-    title = input("Digite o título:\n")
-    search_by_title(title)
+def news_by_title():
+    title = input("Digite o título: ")
+    result = SE.search_by_title(title)
+    for title, link in result:
+        print(f"Título: {title}\n Link: {link}\n")
 
 
-def opt_2():
-    date = input("Digite a data no formato aaaa-mm-dd:\n")
-    search_by_date(date)
+def news_by_data():
+    date = input("Digite a data no formato aaaa-mm-dd: ")
+    result = SE.search_by_date(date)
+    for title, link in result:
+        print(f"Título: {title}\n Link: {link}\n")
 
 
-def opt_3():
-    source = input("Digite a fonte:\n")
-    search_by_source(source)
+def news_by_source():
+    source = input("Digite a fonte: ")
+    result = SE.search_by_source(source)
+    for title, link in result:
+        print(f"Título: {title}\n Link: {link}\n")
 
 
-def opt_4():
-    category = input("Digite a categoria:\n")
-    search_by_category(category)
+def news_by_category():
+    category = input("Digite a categoria: ")
+    result = SE.search_by_category(category)
+    for title, link in result:
+        print(f"Título: {title}\n Link: {link}\n")
 
 
-def opt_5():
-    top_5_news()
+def top_news():
+    result = top_5_news()
+    for title, link in result:
+        print(f"Título: {title}\n Link: {link}\n")
 
 
-def opt_6():
-    top_5_categories()
+def top_category():
+    result = top_5_categories()
+    for category in result:
+        print(category)
 
 
-def opt_7():
+def exit_program():
     print("Encerrando script")
-    SystemExit()
+    return SystemExit()
 
 
 def analyzer_menu():
     call_func = {
-        0: opt_0,
-        1: opt_1,
-        2: opt_2,
-        3: opt_3,
-        4: opt_4,
-        5: opt_5,
-        6: opt_6,
-        7: opt_7,
+        0: save_news_in_db,
+        1: news_by_title,
+        2: news_by_data,
+        3: news_by_source,
+        4: news_by_category,
+        5: top_news,
+        6: top_category,
+        7: exit_program,
     }
 
     select = input(
@@ -69,10 +78,10 @@ def analyzer_menu():
         " 4 - Buscar notícias por categoria;\n"
         " 5 - Listar top 5 notícias;\n"
         " 6 - Listar top 5 categorias;\n"
-        " 7 - Sair."
+        " 7 - Sair.\n: "
     )
 
     if not select.isdigit() or 7 < int(select) > 0:
-        return sys.stderr.write("Opção inválida\n")
+        sys.stderr.write("Opção inválida\n")
     else:
         return call_func[int(select)]()
