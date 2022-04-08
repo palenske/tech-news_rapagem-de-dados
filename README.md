@@ -21,10 +21,10 @@ O site usado é o canal de noticias sobre de tecnologia [TecMundo](https://www.t
     `python3 -m venv .venv && source .venv/bin/activate`
 - Instale as dependências
 
-    `python3 -m pip install -r dev-requirements.txt`
+    `python3 -m pip install -r requirements.txt`
 - Inicie o script `menu.py`:
 
-    `python3 -i menu.py`
+    `python3 -i tech_news/scraping_menu.py`
 - Por fim, chame a função que mostrará o menu para utilizar as funcionalidade da aplicação:
 
     *>>* `analyzer_menu()`
