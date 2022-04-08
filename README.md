@@ -1,23 +1,51 @@
-Lista de requisitos:
-- [Requisitos obrigatórios](#requisitos-obrigatórios)
-  - [1 - Crie a função fetch](#1---crie-a-função-fetch)
-  - [2 - Crie a função scrape_novidades](#2---crie-a-função-scrape_novidades)
-  - [3 - Crie a função scrape_next_page_link](#3---crie-a-função-scrape_next_page_link)
-  - [4 - Crie a função scrape_noticia](#4---crie-a-função-scrape_noticia)
-  - [5 - Crie a função get_tech_news para obter as notícias!](#5---crie-a-função-get_tech_news-para-obter-as-notícias)
-  - [6 - Crie a função search_by_title](#6---crie-a-função-search_by_title)
-  - [7 - Crie a função search_by_date](#7---crie-a-função-search_by_date)
-  - [8 - Crie a função search_by_source,](#8---crie-a-função-search_by_source)
-  - [9 - Crie a função search_by_category](#9---crie-a-função-search_by_category)
-  - [10 - Crie a função top_5_news](#10---crie-a-função-top_5_news)
-  - [11 - Crie a função top_5_categories](#11---crie-a-função-top_5_categories)
-- [Requisitos bônus](#requisitos-bônus)
-  - [12 - Crie a função analyzer_menu](#12---crie-a-função-analyzer_menu)
-  - [13 - Implemente as funcionalidades do menu](#13---implemente-as-funcionalidades-do-menu)
+# TechNews - Data Scraper ⛏️
 
+Esse projeto tem como objetivo utilizar a raspagem de dados em um determinado site e salvar as informações em um banco de dados (Atlas MongoDB).
+O site usado é o canal de noticias sobre de tecnologia [TecMundo](https://www.tecmundo.com.br/)
+
+> Pontos a considerar:
+> - O banco de dados utilizado é uma versão free, suporta apenas 20 coleções por database;
+> - A URI está exposta no código. Entendo a falha de segurança aqui, porém, se trata de um BD free e sem dados sensíveis ;)
+
+
+
+## Utilizando a aplicação:
+- Clone o repositório
+
+    `git clone https://github.com/palenske/tech-news_rapagem-de-dados.git`
+- Entre na pasta do repositório que você acabou de clonar:
+
+    `cd tech-news_rapagem-de-dados`
+- Crie o ambiente virtual para o projeto
+
+    `python3 -m venv .venv && source .venv/bin/activate`
+- Instale as dependências
+
+    `python3 -m pip install -r dev-requirements.txt`
+- Inicie o script `menu.py`:
+
+    `python3 -i menu.py`
+- Por fim, chame a função que mostrará o menu para utilizar as funcionalidade da aplicação:
+
+    *>>* `analyzer_menu()`
+
+Terá uma saída parecida com esta:
+
+```
+    Selecione uma das opções a seguir:
+    0 - Popular o banco com notícias;
+    1 - Buscar notícias por título;
+    2 - Buscar notícias por data;
+    3 - Buscar notícias por fonte;
+    4 - Buscar notícias por categoria;
+    5 - Listar top 5 notícias;
+    6 - Listar top 5 categorias;
+    7 - Sair.
+```
+> Em breve montarei uma interface para usar essas funções em uma página HTML, sem precisar realizar os procedimentos acima 😉
 ---
 
-# Habilidades
+## Habilidades
 
 - Utilizar o terminal interativo do Python;
 - Escrever seus próprios módulos e importá-los em outros códigos;
