@@ -4,8 +4,6 @@ import copy
 with open("tech_news/db/connectionString.txt") as f:
     CONNECTION_STRING = f.readlines()
 
-print(CONNECTION_STRING)
-
 client = MongoClient(CONNECTION_STRING)
 db = client.Tech_news
 
