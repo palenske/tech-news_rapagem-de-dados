@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import copy
 
-with open('connectionString.txt') as f:
+with open("tech_news/db/connectionString.txt") as f:
     CONNECTION_STRING = f.readlines()
 
 print(CONNECTION_STRING)

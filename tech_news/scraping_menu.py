@@ -1,7 +1,7 @@
 import sys
-from tech_news.scraper import get_tech_news
-from tech_news.analyzer.search_engine import SearchEngine
-from tech_news.analyzer.ratings import top_5_news, top_5_categories
+from analyzer.scraper import get_tech_news
+from analyzer.search_engine import SearchEngine
+from analyzer.ratings import top_5_news, top_5_categories
 
 SE = SearchEngine()
 

@@ -1,8 +1,8 @@
 import requests
 from time import sleep
 from parsel import Selector
-from tech_news.utils import stripator, gather
-from tech_news.database import create_news
+from .utils import stripator, gather
+from db.database import create_news
 
 
 def fetch(url):

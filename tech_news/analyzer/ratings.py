@@ -1,4 +1,4 @@
-from tech_news.database import get_collection
+from db.database import get_collection
 
 
 def top_5_news():
