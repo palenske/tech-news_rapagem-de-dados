@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/homepage.css') }}">
+    <title>Tech News</title>
+</head>
+
+<body>
+    <h1 class="title">Tech News</h1>
+    <h2 class="title">Selecione uma das opções</h2>
+    <div class="options-menu">
+        <button onclick="{{analyzer_menu}}">Popular o banco com notícias</button>
+        <button>Buscar notícias por título</button>
+        <button>Buscar notícias por data</button>
+        <button>Buscar notícias por fonte</button>
+        <button>Buscar notícias por categoria</button>
+        <button>Listar top 5 notícias</button>
+        <button>Listar top 5 categorias</button>
+    </div>
+</body>
+
+</html>

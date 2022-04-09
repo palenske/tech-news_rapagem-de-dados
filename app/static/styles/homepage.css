@@ -1,0 +1,20 @@
+.title {
+    text-align: center;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+}
+
+.options-menu {
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: fit-content;
+    padding: 20px 40px;
+    margin: auto;
+}
