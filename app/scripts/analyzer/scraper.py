@@ -2,7 +2,7 @@ import requests
 from time import sleep
 from parsel import Selector
 from .utils import stripator, gather
-from db.database import create_news
+from scripts.db.database import create_news
 
 
 def fetch(url):

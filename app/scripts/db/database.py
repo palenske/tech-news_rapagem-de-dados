@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import copy
 
-with open("app/db/connection_string.txt") as file:
+with open("app/scripts/db/connection_string.txt") as file:
     CONNECTION_STRING = file.readlines()
 
 client = MongoClient(CONNECTION_STRING)

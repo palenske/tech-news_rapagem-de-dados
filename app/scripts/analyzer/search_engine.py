@@ -1,5 +1,5 @@
 from datetime import datetime
-from db.database import search_news
+from scripts.db.database import search_news
 
 
 class SearchEngine:
